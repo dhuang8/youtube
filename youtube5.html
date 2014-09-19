@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="jquery.cookie.js" type="text/javascript"></script>
+    <script src="youtube.js" type="text/javascript"></script>    
+    <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+ <LINK href="cowlistings.css" rel="stylesheet" type="text/css">
+</head>
+  <body style="margin:0">
+	<div style="position:absolute;top:0px;bottom:70px;left:0px;right:300px"><div id="player" style="height:100%;width:100%">Loading...</div></div>
+					
+					<div style="position:absolute;top:0px;bottom:70px;right:0px"><select size=100 multiple style="height:100%;width:300px" ondblclick="changeSong()" id="songlist"></select></div>
+				   
+					<div id="videoInfo" style="position:absolute;bottom:0px;width:100%">
+					    <div style="text-align:right;position:absolute;bottom:0px;right:0px">
+					    	<button  type="submit" onclick="nextSong(1);">Next Video</button>
+					    	<br>
+					    	<select id="pllist"><option value=1>Saved playlist</option><option value=2>Billboard Hot 100 - 11/23/2013</option><option value=3>Billboard Top 40 Radio Songs - 11/23/2013</option></select>
+							<button  type="submit" onclick="loadPlaylist()">Load Playlist</button>
+							<button  type="submit" onclick="savePlaylist()">Save Current Playlist</button>
+							<button  type="submit" onclick="removeVideo()">Remove Video</button>
+						</div>
+						<div id="song"></div>
+						<a id="expandbutton" href="javascript:void(0);" onclick="expand()">[+] Search for more videos</a>
+				    </div>
+					<div id="search" style="position:absolute;top:100%;bottom:-1000px;display:none">
+						<input type="text" id="searchterm" ></input>
+						<button id="searchbutton" onclick="search()">Search</button>
+						<div id="results"></div>
+					</div>
+    
+  </body>
+</html>
